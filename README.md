@@ -28,18 +28,18 @@ Usage
 Fabric is the primary interace for using this application.  It contains four primary 
 commands that you will have access to. The principal command is as follows
 
-bin/fab -r {role(dev|stage|prod)} command:{config_file},{config_section}
+bin/fab -R {role(dev|stage|prod)} command:{config_file},{config_section}
 
 The commands and examples are
 
 sync -- sync files to a server
-bin/fab -r dev sync:confs/myconfig.config,local
+bin/fab -R dev sync:confs/myconfig.config,local
 
 publish -- Remotely publishes files on your server
-bin/fab -r stage sync:conf/myconfig.config,stage
+bin/fab -R stage sync:conf/myconfig.config,stage
 
 restart_server -- Remotely restarts your tomcat server
-bin/fab -r stage sync:conf/mymenu.config,stage
+bin/fab -R stage sync:conf/mymenu.config,stage
 
 deploy -- syncs the files, then publishes, then restarts the server
-bin/fab -r stage sync:conf/mymenu.config,stage
+bin/fab -R stage sync:conf/mymenu.config,stage
